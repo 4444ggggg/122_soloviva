@@ -3,10 +3,34 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:исип_122_соловьева_пр1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Практическая работа 1" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Image Grid.Row="0" Source="Images/image.png" Margin="10"/>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10">
+            <Label Content="Введите x:" Width="80"/>
+            <TextBox Width="100" ToolTip="Введите значение x"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="10">
+            <Label Content="Результат:" Width="80"/>
+            <TextBox Width="100" IsReadOnly="True"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="10">
+            <RadioButton Content="sh(x)" Margin="5"/>
+            <RadioButton Content="x^2" Margin="5"/>
+            <RadioButton Content="e^x" Margin="5"/>
+            <Button Content="Вычислить" Margin="5"/>
+            <Button Content="Очистить" Margin="5"/>
+        </StackPanel>
     </Grid>
 </Window>
