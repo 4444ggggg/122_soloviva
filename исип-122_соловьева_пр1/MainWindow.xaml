@@ -22,15 +22,17 @@
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="10">
             <Label Content="Результат:" Width="80"/>
-            <TextBox Width="100" IsReadOnly="True"/>
+            <TextBox Width="100" IsReadOnly="True" ToolTip="Результат вычислений"/>
         </StackPanel>
 
         <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="10">
-            <RadioButton Content="sh(x)" Margin="5"/>
-            <RadioButton Content="x^2" Margin="5"/>
-            <RadioButton Content="e^x" Margin="5"/>
-            <Button Content="Вычислить" Margin="5"/>
-            <Button Content="Очистить" Margin="5"/>
+            <RadioButton Content="sh(x)" Margin="5" ToolTip="Вычисляет гиперболический синус"/>
+            <RadioButton Content="x^2" Margin="5" ToolTip="Вычисляет квадрат x"/>
+            <RadioButton Content="e^x" Margin="5" ToolTip="Вычисляет экспоненту x"/>
+            <Button Content="Вычислить" Margin="5" ToolTip="Вычисляет результат"/>
+            <Button Content="Очистить" Margin="5" ToolTip="Очищает поля ввода и вывода"/>
+
         </StackPanel>
+        
     </Grid>
 </Window>
