@@ -1,19 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-using System;
 using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,6 +7,11 @@ namespace исип_122_соловьева_пр1
 {
     public partial class MainWindow : Window
     {
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
         private void CalculateButton_Click(object sender, RoutedEventArgs e)
         {
             // Проверка заполненности поля ввода
@@ -38,19 +28,19 @@ namespace исип_122_соловьева_пр1
                 return;
             }
 
-            // Вычисление функции (пример для sh(x))
+            // Вычисление функции
             double result = 0;
             if (ShRadioButton.IsChecked == true)
             {
-                result = Math.Sinh(x); // Гиперболический синус
+                result = Math.Sinh(x);
             }
             else if (SquareRadioButton.IsChecked == true)
             {
-                result = Math.Pow(x, 2); // Квадрат числа
+                result = Math.Pow(x, 2);
             }
             else if (ExpRadioButton.IsChecked == true)
             {
-                result = Math.Exp(x); // Экспонента
+                result = Math.Exp(x);
             }
             else
             {
@@ -59,7 +49,7 @@ namespace исип_122_соловьева_пр1
             }
 
             // Отображение результата
-            ResultTextBox.Text = result.ToString("F2"); // Формат результата (2 знака после запятой)
+            ResultTextBox.Text = result.ToString("F2");
         }
 
         private void ClearButton_Click(object sender, RoutedEventArgs e)

@@ -30,7 +30,7 @@
             <RadioButton x:Name="SquareRadioButton" Content="x^2" Margin="5" ToolTip="Вычисляет квадрат x"/>
             <RadioButton x:Name="ExpRadioButton" Content="e^x" Margin="5" ToolTip="Вычисляет экспоненту x"/>
             <Button Content="Вычислить" Margin="5" ToolTip="Вычисляет результат" Click="CalculateButton_Click"/>
-            <Button Content="Очистить" Margin="5" ToolTip="Очищает поля ввода и вывода" Click="CalculateButton_Click"/>
+            <Button Content="Очистить" Margin="5" ToolTip="Очищает поля ввода и вывода" Click="ClearButton_Click"/>
 
         </StackPanel>
         
